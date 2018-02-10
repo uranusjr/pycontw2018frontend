@@ -1,0 +1,52 @@
+@mixin index-section {
+	padding: 96px 40px 80px 40px;
+}
+
+.index-hero {
+	@include index-section;
+	height: 584px;	// Arbitrary.
+	background-color: $brand;
+	color: white;
+}
+
+.index-proposal-call {
+	@include index-section;
+
+	.my-pycon {
+		@include gradient-hover(276deg, $dark-peach, $maize);
+	}
+}
+
+.index-logo-gap {
+	padding-top: 8px;
+	height: 204px;
+}
+
+.index-introduction {
+	@include index-section;
+	background-image: linear-gradient(159deg, $indigo, $dark-slate-blue);
+
+	article {
+		margin-top: 72px;
+
+		&:first-of-type {
+			margin-top: 0;
+		}
+	}
+	h2, p {
+		color: $white;
+	}
+
+	.volunteer {
+		@include gradient-hover(259deg, $azure, $ultramarine-blue);
+		margin-top: 40px;
+	}
+}
+
+.index-partners {
+	@include index-section;
+
+	.sponsorship {
+		@include gradient-hover(276deg, $dark-peach, $maize);
+	}
+}
