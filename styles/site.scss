@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+@import url('https://fonts.googleapis.com/earlyaccess/notosanstc.css');
+
+@import '../node_modules/breakpoint-sass/stylesheets/breakpoint';
+
+@import './normalize';
+@import './palette';
+
+$mobile-max-width: 768px;
+$container-max-width: 720px;
+
+.container {
+	align-self: center;
+	width: 100%;
+	max-width: $container-max-width;
+	padding-left: 8px;
+	padding-right: 8px;
+
+	@include breakpoint($mobile-max-width) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+@import 'nav';

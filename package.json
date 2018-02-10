@@ -1,0 +1,18 @@
+{
+  "name": "pycontw2018",
+  "version": "1.0.0",
+  "description": "Front end rework for PyCon Taiwan 2018",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "breakpoint-sass": "^2.7.1",
+    "normalize-scss": "^7.0.1"
+  },
+  "devDependencies": {
+    "node-sass": "^4.7.2",
+    "parcel-bundler": "^1.5.1"
+  },
+  "scripts": {
+    "watch": "parcel index.html"
+  }
+}
