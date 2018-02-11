@@ -1,15 +1,16 @@
 @import 'site';
 
 .title-hero {
-	@include text-light;
 	margin: 0;
 	padding: 0;
 	line-height: 300%;
 	background-image: $top-navbar-background;
+	color: $text-light;
 }
 
 .content {
 	@include content-section;
+	@include container;
 
 	h2 {
 		margin-top: 48px;

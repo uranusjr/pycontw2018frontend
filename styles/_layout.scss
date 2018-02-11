@@ -1,7 +1,7 @@
 @mixin container {
-	align-self: center;
 	width: 100%;
 	max-width: $container-max-width;
+	margin: auto;
 	padding-left: 8px;
 	padding-right: 8px;
 

@@ -10,9 +10,27 @@
 	h2 {
 		@include h1;
 	}
-	a:not(.button) {
-		@include no-underline;
-		color: $text-dark;
+	p {
+		text-align: center;
+
+		a {
+			@include no-underline;
+			color: $text-dark;
+		}
+	}
+}
+
+@mixin index-button($angle, $color1, $color2) {
+	@include gradient-hover($angle, $color1, $color2);
+
+	margin: auto;
+	color: $link-light;
+
+  &:hover {
+    color: $link-hover-light;
+  }
+	@include breakpoint($mobile-max-width) {
+		width: 336px;
 	}
 }
 
@@ -27,7 +45,7 @@
 	@include index-section;
 
 	.my-pycon {
-		@include gradient-hover(276deg, $dark-peach, $maize);
+		@include index-button(276deg, $dark-peach, $maize);
 	}
 }
 
@@ -52,7 +70,7 @@
 	}
 
 	.volunteer {
-		@include gradient-hover(259deg, $azure, $ultramarine-blue);
+		@include index-button(259deg, $azure, $ultramarine-blue);
 		margin-top: 40px;
 	}
 }
@@ -61,6 +79,6 @@
 	@include index-section;
 
 	.sponsorship {
-		@include gradient-hover(276deg, $dark-peach, $maize);
+		@include index-button(276deg, $dark-peach, $maize);
 	}
 }
