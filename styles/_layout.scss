@@ -15,6 +15,10 @@
 	@include container;
 }
 
+@mixin content-section {
+	padding: 96px 40px 80px 40px;
+}
+
 footer {
 	padding: 80px 0 1px;
 	background-color: $dark-slate-blue;
@@ -23,13 +27,8 @@ footer {
 		color: $text-light;
 		text-align: center;
 	}
-	a {
-		text-decoration: none;
-
-		&:hover {
-			color: $link-hover-light;
-			text-decoration: underline;
-		}
+	a:hover {
+		color: $link-hover-light;
 	}
 	ul {
 		list-style: none inside;

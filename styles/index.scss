@@ -1,7 +1,15 @@
 @import 'site';
 
 @mixin index-section {
-	padding: 96px 40px 80px 40px;
+	@include content-section;
+
+	h2 {
+		@include h1;
+	}
+	a:not(.button) {
+		color: $text-dark;
+		text-decoration: underline;
+	}
 }
 
 .index-hero {

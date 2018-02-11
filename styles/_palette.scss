@@ -25,8 +25,10 @@ $brand: $indigo;
 $text-light: $white;
 $text-dark: $black;
 
-$link-hover-light: $pale-grey;
+$link-dark: $indigo;
 $link-hover-dark: $purple;
+$link-light: $white;
+$link-hover-light: $pale-grey;
 
 /* Text styles. */
 
@@ -38,20 +40,32 @@ $link-hover-dark: $purple;
   text-align: center;
 }
 
-h1 {
+@mixin h0 {
   @include header(48px);
 }
 
-h2 {
+@mixin h1 {
   @include header(36px);
 }
 
-h3 {
+@mixin h2 {
   @include header(24px);
 }
 
-h4 {
+@mixin h3 {
   @include header(18px);
+}
+
+h1 {
+  @include h1;
+}
+
+h2 {
+  @include h2;
+}
+
+h3 {
+  @include h3;
 }
 
 $text-font-size: 16px;
@@ -62,13 +76,27 @@ $text-font-size-small: 12px;
   font-family: 'Raleway', 'Noto Sans TC', 'sans-sarif';
   font-weight: 300;
   font-size: $font-size;
+
+  strong {
+    font-weight: 500;
+  }
+  em {  // Do not use slant.
+    font-style: normal;
+    font-weight: 400;
+  }
 }
 
 a, button, dl, p, ul {
   @include text($text-font-size);
 }
-a:hover {
-  color: $link-hover-dark;
+a {
+  color: $link-dark;
+  text-decoration: none;
+
+  &:hover {
+    color: $link-hover-dark;
+    text-decoration: underline;
+  }
 }
 dl, p, ul {
   line-height: 1.5rem;
