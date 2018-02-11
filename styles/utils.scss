@@ -23,11 +23,11 @@ dl.inline {
 	padding-top: 16px;
 	padding-bottom: 16px;
 	border-radius: 100px;
-	color: $white;
+	color: $text-light;
 	text-decoration: none;
 
 	&:hover {
-		color: $white-two;
+		color: $link-hover-light;
 	}
 }
 

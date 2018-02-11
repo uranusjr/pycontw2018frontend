@@ -18,15 +18,16 @@
 		color: $white-35;
 		font-size: 16px;
 		text-align: center;
+		cursor: pointer;
 
-		&:hover {
-			text-decoration: none;
-			color: $white-65;
-		}
 		&:disabled {
 			border-radius: 100px;
 			background: $white-35;
 			color: $white;
+		}
+		&:hover {
+			text-decoration: none;
+			color: $white-65;
 		}
 	}
 }
@@ -51,6 +52,7 @@
 		height: $icon-height;
 		transform: rotate(0deg);
 		transition: .5s ease-in-out;
+		cursor: pointer;
 
 		> span {
 			display: block;

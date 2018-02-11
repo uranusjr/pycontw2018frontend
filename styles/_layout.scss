@@ -20,8 +20,16 @@ footer {
 	background-color: $dark-slate-blue;
 
 	a, p, ul {
-		color: $white;
+		color: $text-light;
 		text-align: center;
+	}
+	a {
+		text-decoration: none;
+
+		&:hover {
+			color: $link-hover-light;
+			text-decoration: underline;
+		}
 	}
 	ul {
 		list-style: none inside;
