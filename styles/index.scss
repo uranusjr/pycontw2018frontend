@@ -1,10 +1,12 @@
+@import 'site';
+
 @mixin index-section {
 	padding: 96px 40px 80px 40px;
 }
 
 .index-hero {
 	@include index-section;
-	height: 584px;	// Arbitrary.
+	height: 584px;	// Arbitrary. Will adapt to real banner later.
 	background-color: $brand;
 	color: white;
 }

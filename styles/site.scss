@@ -3,8 +3,8 @@
 
 @import '../node_modules/breakpoint-sass/stylesheets/breakpoint';
 
-@import './normalize';
-@import './palette';
+@import 'normalize';
+@import 'palette';
 
 $mobile-max-width: 768px;
 $container-max-width: 720px;
@@ -12,5 +12,3 @@ $container-max-width: 720px;
 @import 'layout';
 @import 'nav';
 @import 'utils';
-
-@import 'index';
