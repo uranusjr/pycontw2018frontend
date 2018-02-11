@@ -6,7 +6,7 @@ $top-navbar-logo-height: 24px;
 	display: flex;
 	justify-content: space-between;
 	align-items: stretch;
-	align-centner: center;
+	align-content: center;
 	height: $top-navbar-height;
 	border-bottom: solid 1px rgba(230, 230, 230, 0.21);
 	background-image: $top-navbar-background;
@@ -36,6 +36,8 @@ $top-navbar-logo-height: 24px;
 }
 
 .navbar-lang-switch {
+	@include no-underline;
+
 	margin: 0 8px;
 
 	> button {
@@ -54,9 +56,9 @@ $top-navbar-logo-height: 24px;
 			border-radius: 100px;
 			background: $white-35;
 			color: $white;
+			cursor: default;
 		}
 		&:hover {
-			text-decoration: none;
 			color: $white-65;
 		}
 	}
@@ -126,6 +128,32 @@ $top-navbar-logo-height: 24px;
 			transform: rotate(-45deg);
 			top: $icon-height - $center-fix + $top-fix;
 			left: $center-fix;
+		}
+	}
+
+	@include breakpoint($mobile-max-width) {
+		display: none;
+	}
+}
+
+.navbar-social {
+	display: none;
+
+	@include breakpoint($mobile-max-width) {
+		display: flex;
+		align-content: center;
+		margin-right: 24px;
+
+		.fa {
+			margin-left: 40px;
+			color: $white-65;
+			font-size: 24px;
+			line-height: $top-navbar-height;
+
+			&:hover {
+				color: $white;
+				text-decoration: none;
+			}
 		}
 	}
 }

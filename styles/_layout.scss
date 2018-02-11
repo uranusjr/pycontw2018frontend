@@ -20,15 +20,13 @@
 }
 
 footer {
+	@include text-light;
+
 	padding: 80px 0 1px;
 	background-color: $dark-slate-blue;
 
 	a, p, ul {
-		color: $text-light;
 		text-align: center;
-	}
-	a:hover {
-		color: $link-hover-light;
 	}
 	ul {
 		list-style: none inside;

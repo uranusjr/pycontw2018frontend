@@ -20,17 +20,8 @@ $white-35: rgba(255, 255, 255, 0.35);
 /* Some extra styles not in the Zepplin palette. */
 $white-65: rgba(255, 255, 255, 0.65);
 
-/* Theming. */
-$brand: $indigo;
-$text-light: $white;
-$text-dark: $black;
 
-$link-dark: $indigo;
-$link-hover-dark: $purple;
-$link-light: $white;
-$link-hover-light: $pale-grey;
-
-/* Text styles. */
+/* Header styles. */
 
 @mixin header($font-size) {
   color: $black;
@@ -68,8 +59,19 @@ h3 {
   @include h3;
 }
 
+
+/* Content styles. */
+
 $text-font-size: 16px;
 $text-font-size-small: 12px;
+
+$text-light: $white;
+$text-dark: $black;
+
+$link-dark: $indigo;
+$link-hover-dark: $purple;
+$link-light: $white;
+$link-hover-light: $pale-grey;
 
 @mixin text($font-size) {
   color: $text-dark;
@@ -86,15 +88,24 @@ $text-font-size-small: 12px;
   }
 }
 
+@mixin text-light {
+  a {
+    color: $link-light;
+    &:hover {
+      color: $link-hover-light;
+    }
+  }
+  button, dl, p, ul {
+    color: $text-light;
+  }
+}
+
 a, button, dl, p, ul {
   @include text($text-font-size);
 }
 a {
-  color: $link-dark;
   text-decoration: none;
-
   &:hover {
-    color: $link-hover-dark;
     text-decoration: underline;
   }
 }

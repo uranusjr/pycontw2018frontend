@@ -1,14 +1,15 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono|Raleway';
 @import 'https://fonts.googleapis.com/earlyaccess/notosanstc.css';
+@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css';
 
 @import '../node_modules/breakpoint-sass/stylesheets/breakpoint';
 
 @import 'normalize';
 @import 'palette';
+@import 'utils';
 
 $mobile-max-width: 768px;
 $container-max-width: 720px;
 
 @import 'layout';
 @import 'nav';
-@import 'utils';
