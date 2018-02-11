@@ -109,7 +109,7 @@ $top-navbar-logo-height: 24px;
 		}
 	}
 
-	&[disabled] > div {
+	&[aria-expanded="true"] > div {
 		$center-fix: 1px;
 		$top-fix: -1px;
 

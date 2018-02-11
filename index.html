@@ -10,7 +10,7 @@
 
 <body>
 
-<nav class="top-navbar">
+<nav class="top-navbar" data-controller="topNav">
 	<form class="navbar-lang-switch">
 		<button type="submit" value="zh">繁</button>
 		<button type="submit" value="en" disabled="disabled">EN</button>
@@ -20,7 +20,7 @@
 		<a href="./index.html" class="navbar-logo"></a>
 	</div>
 
-	<button class="navbar-toggler" type="button" aria-expanded="false" aria-label="Toggle navigation">
+	<button class="navbar-toggler" type="button" aria-expanded="false" aria-label="Toggle navigation" data-target="topNav.toggler" data-action="topNav#toggle">
 		<div><span></span><span></span><span></span></div>
 	</button>
 </nav>
@@ -86,7 +86,6 @@
 	</ul>
 	<p class="copyright">2018 PyCon Taiwan</p>
 </footer>
-
 
 </body>
 
