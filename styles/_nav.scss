@@ -148,6 +148,7 @@ $top-navbar-logo-height: 24px;
 		margin-right: 24px;
 
 		.fa {
+			@include no-underline;
 			margin-left: 28px;
 			color: $white-65;
 			font-size: 22px;
@@ -155,7 +156,6 @@ $top-navbar-logo-height: 24px;
 
 			&:hover {
 				color: $white;
-				text-decoration: none;
 			}
 		}
 	}
