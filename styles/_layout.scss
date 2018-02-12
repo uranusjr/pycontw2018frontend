@@ -1,13 +1,6 @@
 @mixin container {
 	max-width: $container-max-width;
 	margin: auto;
-	padding-left: 16px;
-	padding-right: 16px;
-
-	@include breakpoint($mobile-max-width) {
-		padding-left: 0;
-		padding-right: 0;
-	}
 }
 
 .container {
