@@ -36,9 +36,10 @@ footer {
 		line-height: 48px;
 
 		&:before {
-			content: '-';
+			content: '\2014\2014';
 			color: $bluey-grey;
 			margin-bottom: 32px;
+			letter-spacing: -0.2ex;
 		}
 	}
 
