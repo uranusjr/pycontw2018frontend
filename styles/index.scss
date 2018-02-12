@@ -32,7 +32,7 @@
 .index-hero {
 	@include index-section;
 	height: 520px;	// Arbitrary. Will adapt to real banner later.
-	background-color: $indigo;
+	background: $top-navbar-background;
 	color: white;
 
 	@include breakpoint($mobile-max-width) {
