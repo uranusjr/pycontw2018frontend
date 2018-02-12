@@ -13,6 +13,10 @@ $top-navbar-logo-height: 24px;
 
 	.navbar-logo {
 		margin-top: ($top-navbar-height - $top-navbar-logo-height) / 2;
+
+		@include breakpoint($mobile-max-width) {
+			display: none;
+		}
 	}
 }
 
@@ -153,6 +157,37 @@ $top-navbar-logo-height: 24px;
 				color: $white;
 				text-decoration: none;
 			}
+		}
+	}
+}
+
+$menu-desktop-height: 136px;
+
+@mixin menu-navbar-desktop($background, $logo) {
+	display: none;
+
+	@include breakpoint($mobile-max-width) {
+		display: flex;
+		flex-direction: column;
+		height: $menu-desktop-height;
+		margin: 0 48px;
+		background: $background;
+	}
+
+	.index-menu-logo {
+		flex: 1;
+		width: 100%;
+		background: $logo center no-repeat;
+	}
+	.menu {
+		flex: 1;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		a {
+			@include header(18px);
+			@include no-underline;
 		}
 	}
 }

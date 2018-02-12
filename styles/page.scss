@@ -1,11 +1,23 @@
 @import 'site';
 
-.title-hero {
-	margin: 0;
-	padding: 0;
-	line-height: 300%;
+.page-hero {
 	background-image: $top-navbar-background;
-	color: $text-light;
+
+	.menu-navbar-desktop {
+		display: none;
+
+		@include breakpoint($mobile-max-width) {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	h1 {
+		margin: 0;
+		padding: 0;
+		line-height: 300%;
+		color: $text-light;
+	}
 }
 
 .content {

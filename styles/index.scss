@@ -34,8 +34,6 @@
 	}
 }
 
-$menu-desktop-height: 136px;
-
 .index-hero {
 	@include index-section;
 	height: 520px;	// Arbitrary. Will adapt to real banner later.
@@ -48,33 +46,9 @@ $menu-desktop-height: 136px;
 }
 
 .menu-navbar-desktop {
-	display: none;
-
-	@include breakpoint($mobile-max-width) {
-		display: flex;
-		flex-direction: column;
-		height: $menu-desktop-height;
-		margin: 0 48px;
-		border-radius: 10px;
-		background-color: $white;
-	}
-
-	.index-menu-logo {
-		flex: 1;
-		width: 100%;
-		background: url('../assets/logo-indigo.svg') center no-repeat;
-	}
-	.menu {
-		flex: 1;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-
-		a {
-			@include header(18px);
-			@include no-underline;
-		}
-	}
+	@include menu-navbar-desktop($white, url('../assets/logo-indigo.svg'));
+	border-radius: 8px;
+	box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.14);
 }
 
 .index-proposal-call {
