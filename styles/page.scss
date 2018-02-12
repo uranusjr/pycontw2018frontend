@@ -2,22 +2,20 @@
 
 .page-hero {
 	background-image: $top-navbar-background;
+}
 
-	.menu-navbar-desktop {
-		display: none;
-
-		@include breakpoint($mobile-max-width) {
-			display: flex;
-			flex-direction: column;
-		}
+.menu-navbar-desktop {
+	@include menu-navbar-desktop(url('../assets/logo-white.svg'));
+	.menu a {
+		color: $white;
 	}
+}
 
-	h1 {
-		margin: 0;
-		padding: 0;
-		line-height: 300%;
-		color: $text-light;
-	}
+h1 {
+	margin: 0;
+	padding: 0;
+	line-height: 300%;
+	color: $text-light;
 }
 
 .content {

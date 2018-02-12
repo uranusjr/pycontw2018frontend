@@ -163,7 +163,7 @@ $top-navbar-logo-height: 24px;
 
 $menu-desktop-height: 136px;
 
-@mixin menu-navbar-desktop($background, $logo) {
+@mixin menu-navbar-desktop($logo) {
 	display: none;
 
 	@include breakpoint($mobile-max-width) {
@@ -171,23 +171,27 @@ $menu-desktop-height: 136px;
 		flex-direction: column;
 		height: $menu-desktop-height;
 		margin: 0 48px;
-		background: $background;
 	}
 
-	.index-menu-logo {
+	.menu-logo {
 		flex: 1;
 		width: 100%;
 		background: $logo center no-repeat;
 	}
 	.menu {
+		@include container;
+
 		flex: 1;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 
 		a {
-			@include header(18px);
 			@include no-underline;
+			font-family: 'Roboto', 'Noto Sans TC', 'sans-sarif';
+		  font-size: 18px;
+		  font-weight: 300;
+		  text-align: center;
 		}
 	}
 }
