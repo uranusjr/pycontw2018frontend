@@ -26,6 +26,7 @@ footer {
 	background-color: $dark-slate-blue;
 
 	a, p, ul {
+		@include no-underline;
 		text-align: center;
 	}
 	ul {
