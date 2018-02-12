@@ -86,7 +86,6 @@ $top-navbar-logo-height: 24px;
 		width: 32px;
 		height: $icon-height;
 		transform: rotate(0deg);
-		transition: .5s ease-in-out;
 		cursor: pointer;
 
 		> span {
@@ -100,7 +99,7 @@ $top-navbar-logo-height: 24px;
 			left: 0;
 			transform: rotate(0deg);
 			transform-origin: left center;
-			transition: .25s ease-in-out;
+			transition: 0.25s ease-in-out;
 
 			&:nth-child(1) {
 				top: 0;
@@ -157,6 +156,47 @@ $top-navbar-logo-height: 24px;
 			&:hover {
 				color: $white;
 			}
+		}
+	}
+}
+
+.menu-navbar-mobile {
+	position: fixed;
+	top: 0;
+	z-index: 99;
+
+	display: flex;
+	width: 100vw;
+	height: 0;
+	flex-direction: column;
+	background-image: $top-navbar-background;
+	transition: 0.25s ease-in-out;
+
+	&.open {
+		height: 100vh;
+	}
+
+	.menu-scrollbox {
+		flex: 1 0;
+		overflow: scroll;
+	}
+
+	.menu {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding-top: 12vh;
+		padding-bottom: 32px;
+
+		a {
+			@include no-underline;
+			margin-bottom: 24px;
+			line-height: 150%;
+			color: $white;
+			font-family: 'Roboto', 'Noto Sans TC', 'sans-sarif';
+		  font-size: 18px;
+		  font-weight: 300;
+		  text-align: center;
 		}
 	}
 }
