@@ -12,11 +12,6 @@
 	}
 	p {
 		text-align: center;
-
-		a {
-			@include no-underline;
-			color: $text-dark;
-		}
 	}
 }
 

@@ -103,12 +103,6 @@ $link-hover-light: $pale-grey;
 a, button, dl, p, ul {
   @include text($text-font-size);
 }
-a {
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-  }
-}
 dl, p, ul {
   line-height: 1.5rem;
 }
