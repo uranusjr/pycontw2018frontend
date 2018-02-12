@@ -65,13 +65,13 @@ $menu-desktop-height: 136px;
 		background: url('../assets/logo-indigo.svg') center no-repeat;
 	}
 	.menu {
-		@include header(18px);
 		flex: 1;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 
 		a {
+			@include header(18px);
 			@include no-underline;
 		}
 	}
