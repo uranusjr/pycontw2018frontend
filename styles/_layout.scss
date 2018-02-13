@@ -1,3 +1,15 @@
+@import '../node_modules/breakpoint-sass/stylesheets/breakpoint';
+
+$mobile-max-width: 768px;
+
+@mixin on-desktop {
+	@include breakpoint($mobile-max-width) {
+		@content;
+	}
+}
+
+$container-max-width: 720px;
+
 @mixin container {
 	max-width: $container-max-width;
 	margin: auto;

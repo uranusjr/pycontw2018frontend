@@ -1,21 +1,6 @@
-@import 'https://fonts.googleapis.com/css?family=Roboto:300,500|Raleway:300,500';
-@import 'https://fonts.googleapis.com/earlyaccess/notosanstc.css';
-@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css';
-
-@import '../node_modules/breakpoint-sass/stylesheets/breakpoint';
-
 @import 'normalize';
 @import 'palette';
-@import 'utils';
-
-$mobile-max-width: 768px;
-$container-max-width: 720px;
-
-@mixin on-desktop {
-	@include breakpoint($mobile-max-width) {
-		@content;
-	}
-}
-
 @import 'layout';
+
+@import 'utils';
 @import 'nav';
