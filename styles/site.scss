@@ -11,5 +11,11 @@
 $mobile-max-width: 768px;
 $container-max-width: 720px;
 
+@mixin on-desktop {
+	@include breakpoint($mobile-max-width) {
+		@content;
+	}
+}
+
 @import 'layout';
 @import 'nav';

@@ -14,7 +14,7 @@ $top-navbar-logo-height: 24px;
 	.navbar-logo {
 		margin-top: ($top-navbar-height - $top-navbar-logo-height) / 2;
 
-		@include breakpoint($mobile-max-width) {
+		@include on-desktop {
 			display: none;
 		}
 	}
@@ -133,7 +133,7 @@ $top-navbar-logo-height: 24px;
 		}
 	}
 
-	@include breakpoint($mobile-max-width) {
+	@include on-desktop {
 		display: none;
 	}
 }
@@ -141,7 +141,7 @@ $top-navbar-logo-height: 24px;
 .navbar-social {
 	display: none;
 
-	@include breakpoint($mobile-max-width) {
+	@include on-desktop {
 		display: flex;
 		align-content: center;
 		margin-right: 24px;
@@ -206,7 +206,7 @@ $menu-desktop-height: 136px;
 @mixin menu-navbar-desktop($logo) {
 	display: none;
 
-	@include breakpoint($mobile-max-width) {
+	@include on-desktop {
 		display: flex;
 		flex-direction: column;
 		height: $menu-desktop-height;

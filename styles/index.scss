@@ -24,7 +24,7 @@
   &:hover {
     color: $link-hover-light;
   }
-	@include breakpoint($mobile-max-width) {
+	@include on-desktop {
 		width: 336px;
 	}
 }
@@ -35,7 +35,7 @@
 	background: $top-navbar-background;
 	color: white;
 
-	@include breakpoint($mobile-max-width) {
+	@include on-desktop {
 		margin-bottom: 0 - $menu-desktop-height / 2;
 	}
 }
@@ -50,7 +50,7 @@
 .index-proposal-call {
 	@include index-section;
 
-	@include breakpoint($mobile-max-width) {
+	@include on-desktop {
 		margin-top: 0 - $menu-desktop-height / 2;
 		padding-top: 160px;
 	}
