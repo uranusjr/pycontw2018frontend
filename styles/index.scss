@@ -29,7 +29,7 @@
 	}
 }
 
-// Apply this mixin to any section to get a logo background after it.
+// Apply this to any section to get a logo background after it.
 @mixin logo-background-section {
 	padding-bottom: calc(50vw + #{nth($content-section-padding, 3)});
 	background: url('../assets/logo-py-indigo.svg') left bottom no-repeat;
@@ -38,6 +38,26 @@
 	@include on-desktop {
 		padding-bottom: 264px;
 		background-size: 480px auto;
+	}
+}
+
+// Apply this to any section to get a grey background with circle decoration.
+@mixin circle-background-section {
+	padding: 42px 28px 42px 28px;
+	background: $pale-grey;
+
+	> article {
+		padding: 32px 12px 54px 12px;
+		background-color: $white;
+	}
+
+	@include on-desktop {
+		padding: 160px 0 168px 0;
+
+		> article {
+			$padding-x: (976px - $container-max-width) / 2;
+			padding: 16px $padding-x 48px $padding-x;
+		}
 	}
 }
 
@@ -96,6 +116,7 @@
 
 .index-partners {
 	@include index-section;
+	@include circle-background-section;
 
 	.sponsorship {
 		@include index-button(276deg, $dark-peach, $maize);
