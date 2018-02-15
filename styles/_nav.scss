@@ -33,9 +33,7 @@ $top-navbar-logo-height: 24px;
 	display: block;
 	width: 100%;
 	height: 100%;
-	background-image: url('../assets/logo-white.svg');
-	background-repeat: no-repeat;
-	background-position-x: center;
+	background: url('../assets/logo-white.svg') top no-repeat;
 }
 
 .navbar-lang-switch {
