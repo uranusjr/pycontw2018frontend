@@ -29,6 +29,18 @@
 	}
 }
 
+// Apply this mixin to any section to get a logo background after it.
+@mixin logo-background-section {
+	padding-bottom: calc(50vw + #{nth($content-section-padding, 3)});
+	background: url('../assets/logo-py-indigo.svg') left bottom no-repeat;
+	background-size: auto 50vw;
+
+	@include on-desktop {
+		padding-bottom: 264px;
+		background-size: 480px auto;
+	}
+}
+
 .index-hero {
 	@include index-section;
 	height: 520px;	// Arbitrary. Will adapt to real banner later.
@@ -49,6 +61,7 @@
 
 .index-proposal-call {
 	@include index-section;
+	@include logo-background-section;
 
 	@include on-desktop {
 		margin-top: 0 - $menu-desktop-height / 2;
@@ -58,11 +71,6 @@
 	.my-pycon {
 		@include index-button(276deg, $dark-peach, $maize);
 	}
-}
-
-.index-logo-gap {
-	padding-top: 8px;
-	height: 204px;
 }
 
 .index-introduction {

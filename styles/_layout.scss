@@ -1,6 +1,6 @@
 @import '../node_modules/breakpoint-sass/stylesheets/breakpoint';
 
-$mobile-max-width: 768px;
+$mobile-max-width: 900px;
 
 @mixin on-desktop {
 	@include breakpoint($mobile-max-width) {
@@ -19,8 +19,10 @@ $container-max-width: 720px;
 	@include container;
 }
 
+$content-section-padding: 96px 40px 80px 40px;
+
 @mixin content-section {
-	padding: 96px 40px 80px 40px;
+	padding: $content-section-padding;
 }
 
 footer {
