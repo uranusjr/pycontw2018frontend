@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Roboto:300,500|Raleway:300,500';
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400|Raleway:300,400';
 @import 'https://fonts.googleapis.com/earlyaccess/notosanstc.css';
 @import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css';
 
@@ -31,7 +31,7 @@ $white-65: rgba(255, 255, 255, 0.65);
   color: $black;
   font-family: 'Roboto', 'Noto Sans TC', 'sans-sarif';
   font-size: $font-size;
-  font-weight: 500;
+  font-weight: 400;
   text-align: center;
 }
 
@@ -84,11 +84,11 @@ $link-hover-light: $pale-grey;
   font-size: $font-size;
 
   strong {
-    font-weight: 500;
+    font-weight: 400;
   }
   em {  // Do not use slant.
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
   }
 }
 
