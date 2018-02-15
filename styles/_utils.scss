@@ -1,3 +1,7 @@
+@mixin menu-items {
+	list-style: none inside;
+}
+
 @mixin no-underline {
 	text-decoration: none;
 	&:hover {
