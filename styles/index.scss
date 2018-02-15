@@ -1,7 +1,11 @@
 @import 'site';
 
-.top-navbar .navbar-logo {
-	margin-top: (3 * $top-navbar-height - $top-navbar-logo-height) / 2;
+.top-navbar {
+	background: $dark-slate-blue;
+
+	.navbar-logo {
+		margin-top: (3 * $top-navbar-height - $top-navbar-logo-height) / 2;
+	}
 }
 
 @mixin index-section {
@@ -97,7 +101,7 @@
 .index-hero {
 	@include index-section;
 	height: 520px;	// Arbitrary. Will adapt to real banner later.
-	background: $top-navbar-background;
+	background: $dark-slate-blue;
 	color: white;
 
 	@include on-desktop {
