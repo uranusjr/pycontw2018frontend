@@ -48,7 +48,7 @@ footer {
 		padding-left: 0;
 		line-height: 48px;
 
-		&:before {
+		&::before {
 			content: '\2014\2014';
 			color: $bluey-grey;
 			margin-bottom: 32px;
