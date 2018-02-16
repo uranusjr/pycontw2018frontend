@@ -1,13 +1,24 @@
-$padding-top-mobile: $top-navbar-offset + 80px;
+$padding-top-mobile: calc(12.5vh + #{$top-navbar-offset * 7 / 8});
 $padding-top-desktop: 168px;
 
+$heading-aspect: 528 / 95;
+$heading-width-mobile: 70vw;
+$heading-height-mobile: $heading-width-mobile / $heading-aspect;
+$heading-width-desktop: 37vw;
+$heading-margin-left-desktop: 50vw - $heading-width-desktop;
+
 & {
+	$bg-offset-y: calc(#{$padding-top-mobile} + #{$heading-height-mobile / 2});
+
 	display: flex;
 	flex-direction: column;
 	margin-top: 0 - $top-navbar-offset;
 	padding-top: $padding-top-mobile;
 	height: calc(100vh - #{$padding-top-mobile});
-	background: radial-gradient(circle at 69% 60%, $indigo, $dark-slate-blue);
+	background:
+		url('../assets/perspective-mobile.svg') center $bg-offset-y no-repeat,
+		radial-gradient(circle at 69% 60%, $indigo, $dark-slate-blue);
+	background-size: contain, auto;
 	color: white;
 	font-family: $header-font-family;
 	font-style: italic;
@@ -18,6 +29,10 @@ $padding-top-desktop: 168px;
 		height: calc(60vw - #{$padding-top-desktop + $menu-overlap});
 		margin-bottom: 0 - $menu-overlap;
 		padding: $padding-top-desktop 0 $menu-overlap 0;
+		background:
+			url('../assets/perspective-desktop.svg') center no-repeat,
+			radial-gradient(circle at 69% 60%, $indigo, $dark-slate-blue);
+		background-size: auto, auto;
 	}
 }
 
@@ -28,14 +43,9 @@ header {
 	flex-direction: column;
 	justify-content: flex-start;
 
-	$heading-aspect: 528 / 95;
-	$heading-width-mobile: 70vw;
-	$heading-width-desktop: 37vw;
-	$heading-margin-left-desktop: 50vw - $heading-width-desktop;
-
 	.hero-heading {
 		width: $heading-width-mobile;
-		height: $heading-width-mobile / $heading-aspect;
+		height: $heading-height-mobile;
 		margin: 0 0 32px 0;
 		color: transparent;
     background: url('../assets/logo-white.svg') no-repeat center;
