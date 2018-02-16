@@ -166,20 +166,19 @@ $top-navbar-offset: $top-navbar-height + 1px;		// Plus border.
 	top: $top-navbar-offset;
 	z-index: 99;
 
-	display: flex;
 	width: 100vw;
 	height: 0;
 	flex-direction: column;
 	background-image: $top-navbar-background;
 	transition: 0.25s ease-in-out;
+	overflow: scroll;
 
-	&.open {
-		height: 100vh;
+	@include on-desktop {
+		display: none;
 	}
 
-	.menu-scrollbox {
-		flex: 1 0;
-		overflow: scroll;
+	&.open {
+		height: calc(100vh - #{$top-navbar-offset});
 	}
 
 	.menu {
