@@ -17,9 +17,9 @@ $heading-margin-left-desktop: 50vw - $heading-width-desktop;
 	height: calc(100vh - #{$padding-top-mobile});
 	max-height: 175vw;
 	background:
-		url('../assets/perspective-mobile.svg') center $bg-offset-y no-repeat,
+		url('../assets/perspective-mobile.svg')
+			center $bg-offset-y / contain no-repeat,
 		radial-gradient(circle at 69% 60%, $indigo, $dark-slate-blue);
-	background-size: contain, auto;
 	color: white;
 	font-family: $header-font-family;
 	font-style: italic;
@@ -33,7 +33,6 @@ $heading-margin-left-desktop: 50vw - $heading-width-desktop;
 		background:
 			url('../assets/perspective-desktop.svg') center no-repeat,
 			radial-gradient(circle at 69% 60%, $indigo, $dark-slate-blue);
-		background-size: auto, auto;
 	}
 }
 
