@@ -73,7 +73,7 @@ $text-dark: $black;
 $link-dark: $indigo;
 $link-hover-dark: $purple;
 $link-light: $white;
-$link-hover-light: $pale-grey;
+$link-hover-light: $white-two;
 
 @mixin text($font-size) {
   color: $text-dark;
