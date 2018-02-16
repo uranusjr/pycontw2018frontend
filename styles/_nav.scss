@@ -163,7 +163,7 @@ $top-navbar-offset: $top-navbar-height + 1px;		// Plus border.
 
 .menu-navbar-mobile {
 	position: fixed;
-	top: 0;
+	top: $top-navbar-offset;
 	z-index: 99;
 
 	display: flex;
