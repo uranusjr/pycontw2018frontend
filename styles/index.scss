@@ -17,7 +17,7 @@ $menu-desktop-border-radius: 8px;
 	@include menu-navbar-desktop(url('../assets/logo-indigo.svg'));
 	border-radius: $menu-desktop-border-radius;
 	background-color: $white;
-	box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.14);
+	// box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.14);
 
 	a:not(:hover) {
 		color: $text-dark;
