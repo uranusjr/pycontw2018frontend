@@ -11,7 +11,7 @@ $padding-top-desktop: 168px;
 	color: white;
 	font-family: $header-font-family;
 	font-style: italic;
-	font-weight: 300;
+	font-weight: 100;
 
 	@include on-desktop {
 		$menu-overlap: $menu-desktop-height / 2;
