@@ -2,6 +2,10 @@
 @import 'index-mixins';
 
 .top-navbar {
+	@include on-desktop {
+		border-bottom-color: transparent;
+	}
+
 	.navbar-logo {
 		margin-top: (3 * $top-navbar-height - $top-navbar-logo-height) / 2;
 	}
@@ -15,24 +19,7 @@
 }
 
 .index-hero {
-	@include index-section;
-
-	margin-top: 0 - $top-navbar-offset;
-	padding-top: $top-navbar-offset + nth($content-section-padding, 1);
-	height: 520px;	// Arbitrary. Will adapt to real banner later.
-	background: radial-gradient(circle at 69% 60%, $indigo, $dark-slate-blue);
-	color: white;
-
-	@include on-desktop {
-		margin-bottom: 0 - $menu-desktop-height / 2;
-	}
-
-	.hero-logo {
-		@include h0;
-		color: transparent;
-    background: url('../assets/logo-white.svg') no-repeat center;
-    background-size: contain;
-	}
+	@import 'index-hero';
 }
 
 .index-proposal-call {

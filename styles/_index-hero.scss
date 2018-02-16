@@ -1,0 +1,78 @@
+$padding-top-mobile: $top-navbar-offset + 80px;
+$padding-top-desktop: 168px;
+
+& {
+	display: flex;
+	flex-direction: column;
+	margin-top: 0 - $top-navbar-offset;
+	padding-top: $padding-top-mobile;
+	height: calc(100vh - #{$padding-top-mobile});
+	background: radial-gradient(circle at 69% 60%, $indigo, $dark-slate-blue);
+	color: white;
+	font-family: $header-font-family;
+	font-style: italic;
+	font-weight: 300;
+
+	@include on-desktop {
+		$menu-overlap: $menu-desktop-height / 2;
+		height: calc(60vw - #{$padding-top-desktop + $menu-overlap});
+		margin-bottom: 0 - $menu-overlap;
+		padding: $padding-top-desktop 0 $menu-overlap 0;
+	}
+}
+
+header {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: flex-start;
+
+	// Align heading right to page center, 40vw - heading.width.
+	$heading-margin-left-desktop: 13vw;
+
+	.hero-heading {
+		width: 70vw;
+		height: 12vw;	// Calculated from the image aspect.
+		margin: 0 0 32px 0;
+		color: transparent;
+    background: url('../assets/logo-white.svg') no-repeat center;
+    background-size: contain;
+
+    @include on-desktop {
+    	align-self: flex-start;
+    	width: 37vw;
+    	height: 7vw;	// Calculated from the image aspect.
+    	margin-left: $heading-margin-left-desktop;
+    }
+	}
+
+	.hero-subheading {
+		display: flex;
+		flex-direction: column;
+		line-height: 160%;
+		margin-left: calc(-35vw + 1ex);		// Align to heading with visual offset.
+		font-size: 1.25rem;
+
+		@include on-desktop {
+			align-self: flex-start;
+			margin-left: $heading-margin-left-desktop;
+			flex-direction: row;
+
+			> * {
+				margin-right: 1ex;
+			}
+		}
+	}
+}
+
+blockquote {
+	margin: 0 12px 12px 0;
+	text-align: right;
+	font-size: 0.875rem;
+
+	@include on-desktop {
+		// Align to menu with visual offset.
+		margin-right: calc(#{$menu-desktop-margin-x} + 1ex);
+	}
+}
