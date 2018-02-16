@@ -28,12 +28,14 @@ header {
 	flex-direction: column;
 	justify-content: flex-start;
 
-	// Align heading right to page center, 40vw - heading.width.
-	$heading-margin-left-desktop: 13vw;
+	$heading-aspect: 528 / 95;
+	$heading-width-mobile: 70vw;
+	$heading-width-desktop: 37vw;
+	$heading-margin-left-desktop: 50vw - $heading-width-desktop;
 
 	.hero-heading {
-		width: 70vw;
-		height: 12vw;	// Calculated from the image aspect.
+		width: $heading-width-mobile;
+		height: $heading-width-mobile / $heading-aspect;
 		margin: 0 0 32px 0;
 		color: transparent;
     background: url('../assets/logo-white.svg') no-repeat center;
@@ -41,23 +43,24 @@ header {
 
     @include on-desktop {
     	align-self: flex-start;
-    	width: 37vw;
-    	height: 7vw;	// Calculated from the image aspect.
+    	width: $heading-width-desktop;
+    	height: $heading-width-desktop / $heading-aspect;
     	margin-left: $heading-margin-left-desktop;
     }
 	}
 
 	.hero-subheading {
+		align-self: flex-start;
 		display: flex;
 		flex-direction: column;
 		line-height: 160%;
-		margin-left: calc(-35vw + 1ex);		// Align to heading with visual offset.
+		margin-left: calc(50vw - #{$heading-width-mobile / 2});
 		font-size: 1.25rem;
 
 		@include on-desktop {
-			align-self: flex-start;
 			margin-left: $heading-margin-left-desktop;
 			flex-direction: row;
+			font-size: 1.5rem;
 
 			> * {
 				margin-right: 1ex;
@@ -72,7 +75,9 @@ blockquote {
 	font-size: 0.875rem;
 
 	@include on-desktop {
-		// Align to menu with visual offset.
-		margin-right: calc(#{$menu-desktop-margin-x} + 1ex);
+		margin-right: $menu-desktop-margin-x + $menu-desktop-border-radius;
+		margin-bottom: 20px;
+
+		font-size: 1.25rem;
 	}
 }
