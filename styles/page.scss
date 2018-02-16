@@ -1,6 +1,8 @@
 @import 'site';
 
 .page-hero {
+	margin-top: 0 - $top-navbar-offset;
+	padding-top: $top-navbar-offset;
 	background-image: $top-navbar-background;
 }
 

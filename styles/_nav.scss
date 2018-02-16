@@ -3,12 +3,13 @@ $top-navbar-height: 64px;
 $top-navbar-logo-height: 24px;
 
 .top-navbar {
+	position: relative;
+	z-index: 1;
 	display: flex;
 	justify-content: space-between;
 	align-items: stretch;
 	height: $top-navbar-height;
 	border-bottom: solid 1px rgba(230, 230, 230, 0.21);
-	background-image: $top-navbar-background;
 	overflow: hidden;
 
 	.navbar-logo {
@@ -19,6 +20,8 @@ $top-navbar-logo-height: 24px;
 		}
 	}
 }
+
+$top-navbar-offset: $top-navbar-height + 1px;		// Plus border.
 
 .navbar-centerbox {
 	position: absolute;
