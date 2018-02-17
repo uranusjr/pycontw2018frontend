@@ -1,5 +1,3 @@
-import '../styles/index.scss'
-
 import {Application} from 'stimulus'
 import {TopNavController} from './controllers/nav'
 
