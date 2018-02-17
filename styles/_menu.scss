@@ -116,15 +116,15 @@ $menu-desktop-height: 136px;
 	}
 	.menu {
 		@include container;
-
 		flex: 1;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		width: 100%;
 
-		li > *:first-child {
+		li > * {
 			@include link-dark;
+			color: $text-dark;
 		}
 	}
 	.submenu {
