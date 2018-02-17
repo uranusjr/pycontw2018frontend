@@ -1,14 +1,19 @@
-.menu {
+@mixin list-reset {
 	list-style: none;
 	padding: 0;
+}
 
-	li {
-    text-align: center;
+.menu {
+	@include list-reset
+
+	li {	// General menu item styling.
+		> input:checked ~ .submenu {
+			display: block;
+		}
 
 		> * {
 			@include no-underline;
 			font-family: $header-font-family;
-	    font-size: 1.125rem;
 	    font-weight: 300;
 
 			&:first-child:hover {
@@ -16,6 +21,23 @@
 			}
 		}
 	}
+
+	> li {	// Styling specific to top-level menu items.
+		position: relative;
+		text-align: center;
+
+		> * {
+			font-size: 1.125rem;
+		}
+	}
+}
+
+.submenu {
+	@include list-reset
+	display: none;
+	margin-top: 8px;
+	border: solid 1px transparent;
+	border-radius: 4px;
 }
 
 .menu-navbar-mobile {
@@ -25,7 +47,6 @@
 
 	width: 100vw;
 	height: 0;
-	flex-direction: column;
 	background-image: $top-navbar-background;
 	transition: 0.25s ease-in-out;
 	overflow: scroll;
@@ -51,19 +72,26 @@
 	}
 
 	.menu {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		padding-top: 12vh;
-		padding-bottom: 32px;
+		padding-top: calc(12vh - 32px);
+		padding-bottom: calc(12vh - 32px);
+
+		li > *:first-child {
+			@include link-light;
+		}
+
+		> li {
+			margin: 32px 0;
+			line-height: 150%;
+		}
+	}
+	.submenu {
+		margin: 8px 24px;
+		border-color: $indigo;
+		background: $dark-violet;
+		text-align: center;
 
 		li {
-			margin-bottom: 24px;
-			line-height: 150%;
-
-			> *:first-child {
-				@include link-light;
-			}
+			margin: 8px;
 		}
 	}
 }
@@ -97,6 +125,19 @@ $menu-desktop-height: 136px;
 
 		li > *:first-child {
 			@include link-dark;
+		}
+	}
+	.submenu {
+		position: absolute;
+		left: -20px;
+		min-width: 136px;
+		margin: 4px 8px;
+		border-color: $pinkish-grey;
+		background: $white;
+		text-align: left;
+
+		li {
+			margin: 4px 12px;
 		}
 	}
 }
