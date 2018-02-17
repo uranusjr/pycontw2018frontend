@@ -170,8 +170,19 @@ $top-navbar-offset: $top-navbar-height + 1px;		// Plus border.
 	list-style: none;
 	padding: 0;
 
-	li > *:first-child:hover {
-		cursor: pointer;
+	li {
+    text-align: center;
+
+		> * {
+			@include no-underline;
+			font-family: $header-font-family;
+	    font-size: 1.125rem;
+	    font-weight: 300;
+
+			&:first-child:hover {
+				cursor: pointer;
+			}
+		}
 	}
 }
 
@@ -217,15 +228,9 @@ $top-navbar-offset: $top-navbar-height + 1px;		// Plus border.
 		li {
 			margin-bottom: 24px;
 			line-height: 150%;
-			text-align: center;
 
 			> *:first-child {
 				@include link-light;
-				@include no-underline;
-				color: $white;
-				font-family: $header-font-family;
-			  font-size: 18px;
-			  font-weight: 300;
 			}
 		}
 	}
@@ -260,11 +265,6 @@ $menu-desktop-height: 136px;
 
 		li > *:first-child {
 			@include link-dark;
-			@include no-underline;
-			font-family: 'Roboto', 'Noto Sans TC', 'sans-sarif';
-			font-size: 18px;
-			font-weight: 300;
-			text-align: center;
 		}
 	}
 }
