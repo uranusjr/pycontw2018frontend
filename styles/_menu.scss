@@ -1,0 +1,115 @@
+.menu {
+	list-style: none;
+	padding: 0;
+
+	li {
+    text-align: center;
+
+		> * {
+			@include no-underline;
+			font-family: $header-font-family;
+	    font-size: 1.125rem;
+	    font-weight: 300;
+
+			&:first-child:hover {
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+.menu-navbar-mobile {
+	position: fixed;
+	top: $top-navbar-offset;
+	z-index: 99;
+
+	width: 100vw;
+	height: 0;
+	flex-direction: column;
+	background-image: $top-navbar-background;
+	transition: 0.25s ease-in-out;
+	overflow: scroll;
+
+	@include on-desktop {
+		display: none;
+	}
+
+	&.no-script {
+		position: relative;
+		z-index: -1;
+		top: 0 - $top-navbar-offset;
+		height: auto;
+		border-bottom: $top-navbar-border-bottom;
+
+		.menu {
+			padding: $top-navbar-offset + 24px 16px 0 16px;
+		}
+	}
+
+	&.open {
+		height: calc(100vh - #{$top-navbar-offset});
+	}
+
+	.menu {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding-top: 12vh;
+		padding-bottom: 32px;
+
+		li {
+			margin-bottom: 24px;
+			line-height: 150%;
+
+			> *:first-child {
+				@include link-light;
+			}
+		}
+	}
+}
+
+$menu-desktop-margin-x: 48px;
+$menu-desktop-height: 136px;
+
+@mixin menu-navbar-desktop($logo) {
+	display: none;
+
+	@include on-desktop {
+		display: flex;
+		flex-direction: column;
+		height: $menu-desktop-height;
+		margin: 0 $menu-desktop-margin-x;
+	}
+
+	.menu-logo {
+		flex: 1;
+		width: 100%;
+		background: $logo center 32px no-repeat;
+	}
+	.menu {
+		@include container;
+
+		flex: 1;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+
+		li > *:first-child {
+			@include link-dark;
+		}
+	}
+}
+
+// Applied when mobile menu is open to disable <body> scrolling.
+body.menu-overlay-open {
+	max-width: 100vw;
+	max-height: 100vh;
+	overflow: hidden;
+
+	@include on-desktop {
+		max-width: none;
+		max-height: none;
+		overflow: auto;
+	}
+}
