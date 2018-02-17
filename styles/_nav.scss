@@ -166,6 +166,15 @@ $top-navbar-offset: $top-navbar-height + 1px;		// Plus border.
 	}
 }
 
+.menu {
+	list-style: none;
+	padding: 0;
+
+	li > *:first-child:hover {
+		cursor: pointer;
+	}
+}
+
 .menu-navbar-mobile {
 	position: fixed;
 	top: $top-navbar-offset;
@@ -205,15 +214,19 @@ $top-navbar-offset: $top-navbar-height + 1px;		// Plus border.
 		padding-top: 12vh;
 		padding-bottom: 32px;
 
-		a {
-			@include no-underline;
+		li {
 			margin-bottom: 24px;
 			line-height: 150%;
-			color: $white;
-			font-family: 'Roboto', 'Noto Sans TC', 'sans-sarif';
-		  font-size: 18px;
-		  font-weight: 300;
-		  text-align: center;
+			text-align: center;
+
+			> *:first-child {
+				@include link-light;
+				@include no-underline;
+				color: $white;
+				font-family: $header-font-family;
+			  font-size: 18px;
+			  font-weight: 300;
+			}
 		}
 	}
 }
@@ -245,12 +258,13 @@ $menu-desktop-height: 136px;
 		justify-content: space-between;
 		width: 100%;
 
-		a {
+		li > *:first-child {
+			@include link-dark;
 			@include no-underline;
 			font-family: 'Roboto', 'Noto Sans TC', 'sans-sarif';
-		  font-size: 18px;
-		  font-weight: 300;
-		  text-align: center;
+			font-size: 18px;
+			font-weight: 300;
+			text-align: center;
 		}
 	}
 }
