@@ -11,10 +11,10 @@ export class MenuController extends Controller {
 
 	exclude(event) {
 		// Close all menus except the one triggering this event.
-		this.itemTargets.forEach(target => {
+		for (const target of this.itemTargets) {
 			if (target !== event.target && target.checked) {
 				target.checked = false
 			}
-		})
+		}
 	}
 }
