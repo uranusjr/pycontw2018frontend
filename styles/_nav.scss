@@ -63,7 +63,7 @@ $top-navbar-offset: $top-navbar-height + 1px;		// Plus border.
 			color: $white;
 			cursor: default;
 		}
-		&:hover {
+		&:not(:disabled):hover {
 			color: $white-65;
 		}
 	}
