@@ -17,7 +17,7 @@ main {
 	@include content-section;
 	@include container;
 
-	padding: 80px 16px 0 16px;
+	padding: 80px 16px nth($content-section-padding, 3) 16px;
 
 	@include on-desktop {
 		padding-left: 0;
