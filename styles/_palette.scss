@@ -102,7 +102,7 @@ $link-hover-light: $white-two;
   }
 }
 
-a, button, dl, label, p, ul {
+button, dl, label, p, ul {
   @include text($text-font-size);
 }
 
