@@ -32,7 +32,8 @@
 	}
 
 	.submenu {
-		@include list-reset
+		@include list-reset;
+		@include text($text-font-size);
 		display: none;
 		margin-top: 8px;
 		border: solid 1px transparent;
@@ -133,7 +134,7 @@ $menu-desktop-height: 136px;
 		.submenu {
 			position: absolute;
 			left: -24px;
-			min-width: 136px;
+			width: 176px;
 			margin: 4px 8px;
 			padding: 4px 0;
 			border-color: $pinkish-grey;
