@@ -14,7 +14,7 @@
 		> * {
 			@include no-underline;
 			font-family: $header-font-family;
-	    font-weight: 300;
+			font-weight: 300;
 
 			&:first-child:hover {
 				cursor: pointer;
