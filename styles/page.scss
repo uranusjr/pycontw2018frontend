@@ -31,8 +31,8 @@ main {
 
 	> h1:first-child {
 		width: 100vw;
-		margin-top: -224px;
-		margin-bottom: 112px;
+		margin-top: -192px;
+		margin-bottom: 80px;
 		margin-left: calc(50% - 50vw);	// Shove to left edge, ignoring container.
 		color: $text-light;
 	}
