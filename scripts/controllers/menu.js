@@ -10,7 +10,7 @@ export class MenuController extends Controller {
 			// Don't run if the event originates from the menu, to avoid triggering
 			// the handler twice when clicking on a menu item. Otherwise a menu item
 			// will not be able to uncheck itself.
-			if (!self.itemTargets.includes(event.target)) {
+			if (!this.itemTargets.includes(event.target)) {
 				this.exclude(event)
 			}
 		})
