@@ -1,13 +1,3 @@
-@import 'breakpoint-sass/stylesheets/breakpoint';
-
-$mobile-max-width: 900px;
-
-@mixin on-desktop {
-	@include breakpoint($mobile-max-width) {
-		@content;
-	}
-}
-
 $container-max-width: 720px;
 
 @mixin container {
