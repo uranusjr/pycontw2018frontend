@@ -4,6 +4,10 @@
 	margin-top: 0 - $top-navbar-offset;
 	padding: $top-navbar-offset 0 112px 0;
 	background-image: $top-navbar-background;
+
+	@include on-desktop {
+		padding-bottom: 200px;
+	}
 }
 
 .menu-navbar-desktop {
