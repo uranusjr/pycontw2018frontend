@@ -4,12 +4,10 @@
 }
 
 @mixin menu-item($base-color, $hover-color) {
+	@include no-underline;
 	color: $base-color;
-	text-decoration: none;
-
 	&:hover {
 		color: $hover-color;
-		text-decoration: none;
 	}
 }
 

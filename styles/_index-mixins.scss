@@ -12,13 +12,10 @@
 @mixin index-button($angle, $color1, $color2) {
 	@include gradient-hover($angle, $color1, $color2);
 	@include link($link-light, $link-light);
+	@include no-underline;
 
 	margin: auto;
 	font-weight: 300;
-
-	&:hover {
-		text-decoration: none;
-	}
 
 	@include on-desktop {
 		width: 336px;
