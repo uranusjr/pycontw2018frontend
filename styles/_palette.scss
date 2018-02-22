@@ -49,18 +49,6 @@ $header-font-family: 'Roboto', 'Noto Sans TC', 'sans-serif';
   @include header(1.125rem);	// ~ 18px.
 }
 
-h1 {
-  @include h1;
-}
-
-h2 {
-  @include h2;
-}
-
-h3 {
-  @include h3;
-}
-
 
 /* Content styles. */
 
@@ -74,6 +62,24 @@ $link-dark: #9d50ff;
 $link-hover-dark: #9d50ff;
 $link-light: $white-two;
 $link-hover-light: $white;
+
+@mixin link($base-color, $hover-color) {
+	color: $base-color;
+	text-decoration: none;
+
+	&:hover {
+		color: $hover-color;
+		text-decoration: underline;
+	}
+}
+
+@mixin link-dark {
+	@include link($link-dark, $link-dark);
+}
+
+@mixin link-light {
+	@include link($link-light, $link-light);
+}
 
 @mixin text($font-size) {
   color: $text-dark;
@@ -92,14 +98,26 @@ $link-hover-light: $white;
 
 @mixin text-light {
   a {
-    color: $link-light;
-    &:hover {
-      color: $link-hover-light;
-    }
+    @include link-light;
   }
   button, dl, p, ul {
     color: $text-light;
   }
+}
+
+
+/* Apply default styling. */
+
+h1 {
+  @include h1;
+}
+
+h2 {
+  @include h2;
+}
+
+h3 {
+  @include h3;
 }
 
 button, dl, label, p, ul {
@@ -108,24 +126,6 @@ button, dl, label, p, ul {
 
 dl, p, ul {
   line-height: 150%;
-}
-
-@mixin link($base-color, $hover-color) {
-	color: $base-color;
-	text-decoration: none;
-
-	&:hover {
-		color: $hover-color;
-		text-decoration: underline;
-	}
-}
-
-@mixin link-dark {
-	@include link($link-dark, $link-dark);
-}
-
-@mixin link-light {
-	@include link($link-light, $link-light);
 }
 
 a {
