@@ -3,6 +3,16 @@
 	padding: 0;
 }
 
+@mixin menu-item($base-color, $hover-color) {
+	color: $base-color;
+	text-decoration: none;
+
+	&:hover {
+		color: $hover-color;
+		text-decoration: none;
+	}
+}
+
 @mixin menu {
 	@include list-reset
 
@@ -78,7 +88,7 @@
 		padding-bottom: calc(12vh - 32px);
 
 		li > *:first-child {
-			@include link-light;
+			@include menu-item($text-light, $link-light);
 		}
 
 		> li {
@@ -127,8 +137,7 @@ $menu-desktop-height: 136px;
 		width: 100%;
 
 		li > * {
-			@include link-dark;
-			color: $text-dark;
+			@include menu-item($text-dark, $link-dark);
 		}
 
 		.submenu {

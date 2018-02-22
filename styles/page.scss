@@ -9,7 +9,7 @@
 .menu-navbar-desktop {
 	@include menu-navbar-desktop(url('../assets/logo-white.svg'));
 	.menu > li > * {
-		@include link-light;
+		@include menu-item($text-light, $link-light);
 	}
 }
 
