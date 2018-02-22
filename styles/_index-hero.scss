@@ -35,7 +35,7 @@ $heading-margin-left-desktop: 50vw - $heading-width-desktop;
 		margin-bottom: 0 - $menu-overlap;
 		padding: $padding-top-desktop 0 $menu-overlap 0;
 		background:
-			url('../assets/perspective-desktop.svg') center no-repeat,
+			url('../assets/perspective-desktop.svg') 17% 83% / 120% no-repeat,
 			radial-gradient(circle at 69% 60%, $indigo, $dark-slate-blue);
 	}
 }
@@ -52,8 +52,7 @@ header {
 		height: $heading-height-mobile;
 		margin: 0 0 32px 0;
 		color: transparent;
-    background: url('../assets/logo-white.svg') no-repeat center;
-    background-size: contain;
+    background: url('../assets/logo-white.svg') center / contain no-repeat;
 
     @include on-desktop {
     	align-self: flex-start;
