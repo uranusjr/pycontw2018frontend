@@ -42,7 +42,6 @@ $top-navbar-offset: $top-navbar-height + 1px;		// Plus border.
 
 .navbar-lang-switch {
 	@include no-underline;
-
 	margin: 0 8px;
 
 	> button {
@@ -55,6 +54,7 @@ $top-navbar-offset: $top-navbar-height + 1px;		// Plus border.
 		color: $white-35;
 		font-size: 16px;
 		text-align: center;
+		text-transform: uppercase;
 		cursor: pointer;
 
 		&:disabled {
