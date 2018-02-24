@@ -80,10 +80,19 @@
 		height: calc(100vh - #{$top-navbar-offset});
 	}
 
+	> * {
+		margin: 11vh 0;
+
+		&:first-child {
+			margin-top: 11vh;
+		}
+		&:last-child {
+			margin-bottom: 11vh;
+		}
+	}
+
 	.menu {
 		@include menu;
-		padding-top: calc(12vh - 32px);
-		padding-bottom: calc(12vh - 32px);
 
 		li > *:first-child {
 			@include menu-item($text-light, $link-light);
