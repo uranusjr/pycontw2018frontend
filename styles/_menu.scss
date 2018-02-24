@@ -12,7 +12,7 @@
 }
 
 @mixin menu {
-	@include list-reset
+	@include list-reset;
 
 	li {	// General menu item styling.
 		> input:checked ~ .submenu {
