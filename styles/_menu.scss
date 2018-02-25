@@ -153,6 +153,7 @@ $menu-desktop-height: 136px;
 			$width: 160px;
 			$margin-above: 16px;
 			$margin-between: 24px;
+			$item-padding: 8px;
 
 			position: absolute;
 			left: calc(50% - #{$width / 2});
@@ -164,15 +165,30 @@ $menu-desktop-height: 136px;
 			text-align: center;
 
 			&::before {
+				$width: 96px;
 				display: block;
 				content: '';
-				width: 96px;
-				margin: -$margin-between 0 ($margin-between + 16px) calc(50% - 48px);
+				width: $width;
+				margin: -$margin-between 0 $margin-between calc(50% - #{$width / 2});
 				border-top: solid 1.5px $menu-deco-color;
 			}
 
 			li {
-				margin: 16px 8px;
+				display: flex;
+				flex-direction: column;
+				align-content: stretch;
+
+				> *:first-child {
+					display: inline-block;
+					padding: $item-padding;
+				}
+
+				&:first-child > *:first-child {
+					padding-top: 2 * $item-padding;
+				}
+				&:last-child > *:first-child {
+					padding-bottom: 2 * $item-padding;
+				}
 			}
 		}
 	}
