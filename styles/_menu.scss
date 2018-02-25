@@ -41,7 +41,7 @@
 
 	.submenu {
 		@include list-reset;
-		@include text($text-font-size);
+		@include text(1.125rem);
 		display: none;
 		margin-top: 8px;
 		border: solid 1px transparent;
@@ -118,7 +118,7 @@
 $menu-desktop-margin-x: 48px;
 $menu-desktop-height: 136px;
 
-@mixin menu-navbar-desktop($logo) {
+@mixin menu-navbar-desktop($logo, $menu-deco-color) {
 	display: none;
 
 	@include on-desktop {
@@ -139,25 +139,40 @@ $menu-desktop-height: 136px;
 		flex: 1;
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: space-around;
 		width: 100%;
 
-		li > * {
-			@include menu-item($text-dark, $link-dark);
+		li {
+			flex: 1;
+			> * {
+				@include menu-item($text-dark, $link-dark);
+			}
 		}
 
 		.submenu {
+			$width: 160px;
+			$margin-above: 16px;
+			$margin-between: 24px;
+
 			position: absolute;
-			left: -24px;
-			width: 176px;
-			margin: 4px 8px;
-			padding: 4px 0;
+			left: calc(50% - #{$width / 2});
+			min-width: $width;
+			margin-top: $margin-above + $margin-between;
 			border-color: $pinkish-grey;
-			background: $white;
-			text-align: left;
+			background: rgba($white, 0.95);
+			box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15);
+			text-align: center;
+
+			&::before {
+				display: block;
+				content: '';
+				width: 96px;
+				margin: -$margin-between 0 ($margin-between + 16px) calc(50% - 48px);
+				border-top: solid 1.5px $menu-deco-color;
+			}
 
 			li {
-				margin: 4px 16px;
+				margin: 16px 8px;
 			}
 		}
 	}
