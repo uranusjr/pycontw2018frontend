@@ -11,7 +11,7 @@
 
 @mixin index-button($angle, $color1, $color2) {
 	@include gradient-hover($angle, $color1, $color2);
-	@include link($link-light, $link-light);
+	@include link($white, $white);
 	@include no-underline;
 
 	margin: auto;
