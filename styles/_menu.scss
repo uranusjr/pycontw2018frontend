@@ -24,6 +24,9 @@ $menu-item-types: '> a, > label';
 		> input:checked ~ .submenu {
 			display: block;
 		}
+		> .submenu:hover {
+			display: block;
+		}
 		@include menu-item($top-item-color, $top-item-hover-color) {
 			font-weight: 300;
 		}
