@@ -115,9 +115,7 @@
 $menu-desktop-margin-x: 48px;
 $menu-desktop-height: 136px;
 
-@mixin menu-navbar-desktop(
-		$logo, $menu-deco-color,
-		$top-item-color, $top-item-hover-color) {
+@mixin menu-navbar-desktop($logo, $menu-deco-color, $top-item-color) {
 	display: none;
 
 	@include on-desktop {
@@ -134,7 +132,7 @@ $menu-desktop-height: 136px;
 	}
 	.menu {
 		@include container;
-		@include menu($top-item-color, $top-item-hover-color);
+		@include menu($top-item-color, $top-item-color);
 		flex: 1;
 		display: flex;
 		align-items: center;
