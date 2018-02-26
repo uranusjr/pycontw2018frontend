@@ -3,11 +3,17 @@
 	padding: 0;
 }
 
+$menu-item-types: '> a, > label';
+
 @mixin menu-item($base-color, $hover-color) {
-	@include no-underline;
-	color: $base-color;
-	&:hover {
-		color: $hover-color;
+	#{$menu-item-types} {
+		@include no-underline;
+		color: $base-color;
+		&:hover {
+			cursor: pointer;
+			color: $hover-color;
+		}
+		@content;
 	}
 }
 
@@ -18,15 +24,8 @@
 		> input:checked ~ .submenu {
 			display: block;
 		}
-
-		> * {
-			@include no-underline;
-			@include menu-item($top-item-color, $top-item-hover-color);
+		@include menu-item($top-item-color, $top-item-hover-color) {
 			font-weight: 300;
-
-			&:first-child:hover {
-				cursor: pointer;
-			}
 		}
 	}
 
@@ -35,7 +34,7 @@
 		text-align: center;
 		font-family: $header-font-family;
 
-		> * {
+		#{$menu-item-types} {
 			font-size: 1.125rem;
 		}
 	}

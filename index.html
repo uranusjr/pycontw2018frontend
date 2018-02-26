@@ -110,17 +110,18 @@
 <nav class="menu-navbar-desktop">
 	<div class="menu-logo"></div>
 	<ul class="menu" data-controller="menu">
+		<!-- Ordering matters here. input must be ahead of label and .submenu for styling to work! See code in .menu-navbar-desktop .menu > li. -->
 		<li>
-			<label for="menu-navbar-desktop-about">關於</label>
 			<input type="checkbox" hidden="hidden" id="menu-navbar-desktop-about" data-target="menu.item" data-action="change->menu#exclude">
+			<label for="menu-navbar-desktop-about">關於</label>
 			<ul class="submenu">
 				<li><a href="./page.html">PyCon Taiwan</a></li>
 				<li><a href="./page.html">行為準則</a></li>
 			</ul>
 		</li>
 		<li>
-			<label for="menu-navbar-desktop-propose">投稿</label>
 			<input type="checkbox" hidden="hidden" id="menu-navbar-desktop-propose" data-target="menu.item" data-action="change->menu#exclude">
+			<label for="menu-navbar-desktop-propose">投稿</label>
 			<ul class="submenu">
 				<li><a href="./page.html">演講</a></li>
 				<li><a href="./page.html">教學</a></li>
@@ -128,8 +129,8 @@
 			</ul>
 		</li>
 		<li>
-			<label for="menu-navbar-desktop-venue">會場</label>
 			<input type="checkbox" hidden="hidden" id="menu-navbar-desktop-venue" data-target="menu.item" data-action="change->menu#exclude">
+			<label for="menu-navbar-desktop-venue">會場</label>
 			<ul class="submenu">
 				<li><a href="./page.html">會議地點</a></li>
 				<li><a href="./page.html">住宿</a></li>
