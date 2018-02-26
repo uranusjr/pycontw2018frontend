@@ -21,7 +21,6 @@
 
 		> * {
 			@include no-underline;
-			font-family: $header-font-family;
 			font-weight: 300;
 
 			&:first-child:hover {
@@ -33,6 +32,7 @@
 	> li {	// Styling specific to top-level menu items.
 		position: relative;
 		text-align: center;
+		font-family: $header-font-family;
 
 		> * {
 			font-size: 1.125rem;
@@ -142,10 +142,10 @@ $menu-desktop-height: 136px;
 		justify-content: space-around;
 		width: 100%;
 
-		li {
+		> li {
 			flex: 1;
-			> * {
-				@include menu-item($text-dark, $link-dark);
+			> *:first-child {
+				@include menu-item($text-dark, $text-dark);
 			}
 		}
 
@@ -159,7 +159,6 @@ $menu-desktop-height: 136px;
 			left: calc(50% - #{$width / 2});
 			min-width: $width;
 			margin-top: $margin-above + $margin-between;
-			border-color: $pinkish-grey;
 			background: rgba($white, 0.95);
 			box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15);
 			text-align: center;
@@ -179,8 +178,9 @@ $menu-desktop-height: 136px;
 				align-content: stretch;
 
 				> *:first-child {
-					display: inline-block;
+					flex: 1;
 					padding: $item-padding;
+					@include menu-item($text-dark, $link-hover-dark);
 				}
 
 				&:first-child > *:first-child {
