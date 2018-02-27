@@ -52,7 +52,7 @@
 		<ul class="menu" data-controller="menu">
 			<li>
 				<label for="menu-navbar-mobile-about">關於</label>
-				<input type="checkbox" hidden="hidden" id="menu-navbar-mobile-about" data-target="menu.item" data-action="change->menu#exclude">
+				<input type="checkbox" hidden="hidden" id="menu-navbar-mobile-about" data-target="menu.checker" data-action="change->menu#exclude">
 				<div class="dropdown">
 					<ul class="submenu">
 						<li><a href="./page.html">PyCon Taiwan</a></li>
@@ -62,7 +62,7 @@
 			</li>
 			<li>
 				<label for="menu-navbar-mobile-propose">投稿</label>
-				<input type="checkbox" hidden="hidden" id="menu-navbar-mobile-propose" data-target="menu.item" data-action="change->menu#exclude">
+				<input type="checkbox" hidden="hidden" id="menu-navbar-mobile-propose" data-target="menu.checker" data-action="change->menu#exclude">
 				<div class="dropdown">
 					<ul class="submenu">
 						<li><a href="./page.html">演講</a></li>
@@ -73,7 +73,7 @@
 			</li>
 			<li>
 				<label for="menu-navbar-mobile-venue">會場</label>
-				<input type="checkbox" hidden="hidden" id="menu-navbar-mobile-venue" data-target="menu.item" data-action="change->menu#exclude">
+				<input type="checkbox" hidden="hidden" id="menu-navbar-mobile-venue" data-target="menu.checker" data-action="change->menu#exclude">
 				<div class="dropdown">
 					<ul class="submenu">
 						<li><a href="./page.html">會議地點</a></li>
@@ -117,8 +117,8 @@
 	<div class="menu-logo"></div>
 	<ul class="menu" data-controller="menu">
 		<!-- Ordering matters here. input must be ahead of label and .submenu for styling to work! See code in .menu-navbar-desktop .menu > li. -->
-		<li>
-			<input type="checkbox" hidden="hidden" id="menu-navbar-desktop-about" data-target="menu.item" data-action="change->menu#exclude">
+		<li data-target="menu.item" data-action="mouseover->menu#open mouseout->menu#close">
+			<input type="checkbox" hidden="hidden" id="menu-navbar-desktop-about" data-target="menu.checker" data-action="change->menu#exclude">
 			<label for="menu-navbar-desktop-about">關於</label>
 			<div class="dropdown">
 				<ul class="submenu">
@@ -127,8 +127,8 @@
 				</ul>
 			</div>
 		</li>
-		<li>
-			<input type="checkbox" hidden="hidden" id="menu-navbar-desktop-propose" data-target="menu.item" data-action="change->menu#exclude">
+		<li data-target="menu.item" data-action="mouseover->menu#open mouseout->menu#close">
+			<input type="checkbox" hidden="hidden" id="menu-navbar-desktop-propose" data-target="menu.checker" data-action="change->menu#exclude">
 			<label for="menu-navbar-desktop-propose">投稿</label>
 			<div class="dropdown">
 				<ul class="submenu">
@@ -138,8 +138,8 @@
 				</ul>
 			</div>
 		</li>
-		<li>
-			<input type="checkbox" hidden="hidden" id="menu-navbar-desktop-venue" data-target="menu.item" data-action="change->menu#exclude">
+		<li data-target="menu.item" data-action="mouseover->menu#open mouseout->menu#close">
+			<input type="checkbox" hidden="hidden" id="menu-navbar-desktop-venue" data-target="menu.checker" data-action="change->menu#exclude">
 			<label for="menu-navbar-desktop-venue">會場</label>
 			<div class="dropdown">
 				<ul class="submenu">
@@ -148,13 +148,13 @@
 				</ul>
 			</div>
 		</li>
-		<li>
+		<li data-target="menu.item" data-action="mouseover->menu#open mouseout->menu#close">
 			<a href="./page.html">合作</a>
 		</li>
-		<li>
+		<li data-target="menu.item" data-action="mouseover->menu#open mouseout->menu#close">
 			<a href="https://pycontw.blogspot.tw/">Blog</a>
 		</li>
-		<li>
+		<li data-target="menu.item" data-action="mouseover->menu#open mouseout->menu#close">
 			<a href="./page.html">My PyCon</a>
 		</li>
 	</ul>
