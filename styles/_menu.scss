@@ -21,11 +21,9 @@ $menu-item-types: '> a, > label';
 	@include list-reset;
 
 	li {	// General menu item styling.
-		> input:checked ~ .submenu {
-			display: block;
-		}
-		> .submenu:hover {
-			display: block;
+		> input:checked ~ .dropdown, > .dropdown:hover {
+			height: auto;
+			overflow: visible;
 		}
 		@include menu-item($top-item-color, $top-item-hover-color) {
 			font-weight: 300;
@@ -42,10 +40,14 @@ $menu-item-types: '> a, > label';
 		}
 	}
 
+	.dropdown {
+		height: 0;
+		overflow: hidden;
+	}
+
 	.submenu {
 		@include list-reset;
 		@include text(1.125rem);
-		display: none;
 		margin-top: 8px;
 		border: solid 1px transparent;
 		border-radius: 4px;

@@ -56,10 +56,19 @@ $menu-desktop-height: 136px;
 				}
 			}
 
+			> input:checked ~ .dropdown > .submenu {
+				transform: scaleY(1);
+			}
+
 			// This requires the input to be *before* the label element in markup.
 			> input:checked ~ label::after {
 				width: 100%;
 			}
+		}
+
+		.dropdown {
+			flex: 0;
+			min-height: 40px;	// Arbitrary; enough to fill gap under menu item.
 		}
 
 		.submenu {
@@ -73,6 +82,9 @@ $menu-desktop-height: 136px;
 			background: rgba($white, 0.95);
 			box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15);
 			text-align: center;
+			transform: scaleY(0);
+			transform-origin: top;
+			transition: transform 0.25s ease-in-out;
 
 			li {
 				display: flex;
